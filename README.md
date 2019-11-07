@@ -10,6 +10,9 @@ I wanted to learn how compilers (& interpreters) & language design work
 
 -> because it is meant to be to learn, it will be compiled to typescript / javascript
 
+Thanks to [jamiebuilds/ghost-lang](https://github.com/jamiebuilds/ghost-lang) i got motivated to make an own language & to learn about how it works  
+And thanks to [jamiebuilds/the-super-tiny-compiler](https://github.com/jamiebuilds/the-super-tiny-compiler/) i got an example on how to do it
+
 ## Syntax
 
 Mostly taken from EcmaScript & Python
@@ -82,6 +85,16 @@ let name =
     This is with 2-space indentation /* Inline / Multiline Comment */
       This is with 4-space indentation \// This is NOT a comment
   """; // semicolon is optional
+```
+
+```txt
+let name =
+  \``` // ignore the "\", it is because of markdown
+  This is a multiline string
+  This is with 0-space indentation // Full line comment
+    This is with 2-space indentation /* Inline / Multiline Comment */
+      This is with 4-space indentation \// This is NOT a comment
+  \```; // semicolon is optional
 ```
 
 The multiline string above with `\//` is not a comment, because to be a full comment it would need to match `//`
